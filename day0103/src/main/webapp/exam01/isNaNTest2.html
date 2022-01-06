@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+	function pro() {
+		let str = document.getElementById("num").value;
+		if(isNaN(str)){
+			alert("숫자를 입력하세요");
+			return;
+		}
+		
+		var num = Number(document.getElementById("num").value);
+		let result = document.getElementById("result")
+		if(num % 2 ==0){
+			result.innerHTML = "짝수";
+		}else{
+			result.innerHTML = "홀수";
+		}
+	}
+</script>
+</head>
+<body>
+	<h2>짝수 홀수 판별</h2>
+	<hr>
+	수를 입력하세요: <input type="text" id="num">
+	<button onclick="pro()">확인</button><br>
+	결과: <span id ="result"></span>
+</body>
+</html>

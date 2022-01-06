@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+	function pro() {
+		let radius = Number(document.getElementById("radius").value);
+		let pi = 3.14159265;
+		let round = 2*pi*radius;
+		let area = pi*radius*radius;
+		document.getElementById("round").innerHTML = round;
+		document.getElementById("area").innerHTML = area;
+		
+	}
+</script>
+</head>
+<body>
+	반지름: <input type="text" id="radius">
+	<button onclick="pro()">확인</button><br>
+	둘레 : <span id="round"></span><br>
+	넓이 : <span id="area"></span>
+</body>
+</html>

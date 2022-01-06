@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+	function pro() {
+		score = Number(document.getElementById("num").value);
+		if(score>=90){
+			result = "수";
+		}else if(score>=80){
+			result = "우";
+		}else if(score>=70){
+			result = "미";
+		}
+		else if(score>=60){
+			result = "양";
+		}
+		else {
+			result = "가";
+		}
+		
+		document.getElementById("result").innerHTML = result;
+	}
+</script>
+</head>
+<body>
+점수 : <input type="text" id="num"><br>
+<button onclick="pro()">판별</button><br>
+<span id="result"></span>
+</body>
+</html>

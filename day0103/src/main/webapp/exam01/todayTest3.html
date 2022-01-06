@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<div id="result"></div>
+<script type="text/javascript">
+
+	setInterval(function(){let today = new Date();
+	let year = today.getFullYear();
+	let month = today.getMonth()+1;
+	let date = today.getDate();
+	let hours = today.getHours();
+	let minutes = today.getMinutes();
+	let seconds = today.getSeconds();
+	
+	let result = `${year}년 ${month}월 ${date}일 ${hours}시 ${minutes}분 ${seconds}초`;
+	
+	document.getElementById("result").innerHTML = result;
+	
+	} , 1000);
+		
+</script>
+</body>
+</html>

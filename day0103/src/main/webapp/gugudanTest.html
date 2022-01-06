@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+	function pro() {
+		dan = Number(document.getElementById("dan").value);
+		let data = "";
+		data += `<h2>${dan}단</h2>`;
+		data += "<hr>";
+		for(let i=1;i<=9;i++){
+			data +=`${dan}*${i}=${dan*i}<br>`;
+		}
+		document.getElementById("result").innerHTML=data;
+	}
+</script>
+</head>
+<body>
+단 : <input type="text" id="dan"><br>
+<button onclick="pro()">확인</button><br>
+<span id="result"></span>
+</body>
+</html>

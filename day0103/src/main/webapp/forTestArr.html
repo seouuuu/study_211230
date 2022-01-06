@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+	let arr = ["사과","포도","수박","체리","오렌지","블루베리","감"];
+	
+	window.onload = function(){
+		let data = "";
+		data += "<ul>";
+		for(let i=0;i<arr.length;i++){
+			//data += "<li>"+arr[i]+"</li>";
+			data += `<li>${arr[i]}</li>`;
+		}
+		data += "</ul>";
+		document.getElementById("result").innerHTML = data;
+	}
+	
+	
+</script>
+</head>
+<body>
+	<div id="result"></div>
+</body>
+</html>

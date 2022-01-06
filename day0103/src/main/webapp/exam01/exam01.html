@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+	function valueNum() {
+		a = Number(document.getElementById("num1").value);
+		b = Number(document.getElementById("num2").value);
+		
+		if(a>b){
+			result = a;
+		}else
+			result = b;
+		document.getElementById("n").innerHTML = result;
+	}
+</script>
+</head>
+<body>
+	수1 : <input type="text" id="num1">
+	수2 : <input type="text" id="num2">
+	<button onclick="valueNum()">확인</button><br>
+	<span id="n"></span>
+</body>
+</html>

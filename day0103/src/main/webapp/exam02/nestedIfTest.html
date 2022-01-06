@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+	function maxNum() {
+		a = Number(document.getElementById("num1").value);
+		b = Number(document.getElementById("num2").value);
+		c = Number(document.getElementById("num3").value);
+		max = b;
+		if(a>=b){
+			if(a>=c){
+				max = a;
+			}else{
+				max = c;
+			}
+		}else{
+			if(b>c){
+				max = b;
+			}else{
+				max = c;
+			}
+		}
+		document.getElementById("result").innerHTML = max;
+	}
+</script>
+</head>
+<body>
+	수1 : <input type="text" id="num1"><br>
+	수2 : <input type="text" id="num2"><br>
+	수3 : <input type="text" id="num3"><br>
+	<button onclick="maxNum()">큰수찾기</button><br>
+	<span id="result"></span>
+</body>
+</html>
