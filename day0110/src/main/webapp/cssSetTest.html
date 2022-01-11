@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+	span{
+		display: inline-block;
+		width: 30px;
+		height: 20px;
+		margin: 20px;
+	}
+	
+	body{
+		padding: 100px;
+	}
+</style>
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script type="text/javascript">
+	$(function () {
+		$("span").click(function () {
+			$("div").css("color",$(this).css("background-color"));
+		});
+		/*
+		let span_list = $("span");
+		$.each(span_list,function(index,item){
+			$(item).click(function () {
+				
+				let color = $(this).css("background-color");
+				alert(color);
+				//$("div").css("color",color);
+			})
+		})
+		*/
+	})
+</script>
+</head>
+<body>
+	<div>희뿌연 먼지로 도심 전체가 뒤덮여 있습니다.
+
+현재 이 시각 서울 중랑천의 CCTV 화면인데요, 평소라면 선명하게 보일만한 풍경이 지금은 먼지와 안개가 뒤엉켜 있어서 온통 흐릿하게 나타나고 있습니다.
+
+수도권과 충청, 그리고 전북까지 서쪽 지방에는 미세먼지 비상저감조치도 내려져 있습니다.</div>
+	<hr>
+	<span style="background: red"></span>
+	<span style="background: green"></span>
+	<span style="background: blue"></span>
+	<span style="background: pink"></span>
+	<span style="background: orange"></span>
+</body>
+</html>

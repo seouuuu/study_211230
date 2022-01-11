@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script type="text/javascript">
+	$(function () {
+		let arr_goods = ["축구공","유니폼","축구화","스타킹"];
+		let arr_fname = {
+				"축구공":["ball1.jpg","ball2.jpg","ball3.jpg","ball4.jpg","ball5.jpg"],
+				"유니폼":["cloth1.jpg","cloth2.jpg","cloth3.jpg","cloth4.jpg","cloth5.jpg"],
+				"축구화":["shoe1.jpg","shoe2.jpg","shoe3.jpg","shoe4.jpg","shoe5.jpg"],
+				"스타킹":["stock1.jpg","stock2.jpg","stock3.jpg","stock4.jpg","stock5.jpg"]
+		};
+		
+		$.each(arr_goods,function(index,item){
+			$("#goods_list").append($("<option></option>").html(item));
+		});
+		
+		$("#goods_list").change(function () {
+			let goods_name = $("#goods_list > option:selected").val();
+			$("#fname_list").empty();
+			
+			let arr = arr_fname[goods_name];
+			$.each(arr,function(index,item){
+				$("#fname_list").append( $("<option></option>").html(item));
+			});
+		});
+		
+		$("#fname_list").change(function () {
+			//let fname = "images/" + $("#fname_list > option:selected").val();
+			let fname = $("#fname_list > option:selected").val();
+			let path = `images/${fname}`;
+			$("img").attr("src",path);
+		})
+	})
+</script>
+</head>
+<body>
+	<select id="goods_list"></select>
+	<select id="fname_list"></select>
+	<hr>
+	<img>
+</body>
+</html>

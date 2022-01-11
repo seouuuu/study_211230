@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script type="text/javascript">
+	$(function () {
+		$("#btnSet").click(function () {
+			$("h1").css("color","black");
+		});
+		
+		$("#btnGet").click(function () {
+			let color = $("h1").css("color");
+			alert(color);
+		});
+	})
+</script>
+</head>
+<body>
+	<h1 style="color: red">홍길동</h1>
+	<h1 style="color: blue">이순신</h1>
+	<h1 style="color: orange">유관순</h1>
+	<h1 style="color: green">김유신</h1>
+	<h1 style="color: pink">강감찬</h1>
+	<button id="btnSet">css 설정하기</button>
+	<button id="btnGet">css 읽어오기</button>
+</body>
+</html>

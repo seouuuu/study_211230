@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script type="text/javascript">
+	$(function () {
+		$("#btn").click(function () {
+			let data = $("#text1").val();
+			$("#text2").val(data);
+		});
+	});
+</script>
+</head>
+<body>
+	<input type="text" id="text1">
+	<button id="btn">복사하기</button>
+	<input type="text" id="text2">
+</body>
+</html>

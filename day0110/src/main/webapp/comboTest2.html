@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script type="text/javascript">
+	$(function () {
+		let arr_goods = ["축구공","유니폼","축구화","스타킹"];
+		
+		let arr_fname = {
+				"축구공":[{name:"공1",fname:"ball1.jpg"},{name:"공2",fname:"ball2.jpg"},{name:"공3",fname:"ball3.jpg"},{name:"공4",fname:"ball4.jpg"},{name:"공5",fname:"ball5.jpg"}],
+				"유니폼":[{name:"유니폼1",fname:"cloth1.jpg"},{name:"유니폼2",fname:"cloth2.jpg"},{name:"유니폼3",fname:"cloth3.jpg"},{name:"유니폼4",fname:"cloth4.jpg"},{name:"유니폼5",fname:"cloth5.jpg"}],
+				"축구화":[{name:"축구화1",fname:"shoe1.jpg"},{name:"축구화2",fname:"shoe2.jpg"},{name:"축구화3",fname:"shoe3.jpg"},{name:"축구화4",fname:"shoe4.jpg"},{name:"축구화5",fname:"shoe5.jpg"}],
+				"스타킹":[{name:"스타킹1",fname:"stock1.jpg"},{name:"스타킹2",fname:"stock2.jpg"},{name:"스타킹3",fname:"stock3.jpg"},{name:"스타킹4",fname:"stock4.jpg"},{name:"스타킹5",fname:"stock5.jpg"}]
+		};
+		
+		/*
+		let arr_fname = {
+				"축구공":["공1","공2","공3","공4","공5"],
+				"유니폼":["유니폼1","유니폼2","유니폼3","유니폼4","유니폼5"],
+				"축구화":["축구화1","축구화2","축구화3","축구화4","축구화5"],
+				"스타킹":["스타킹1","스타킹2","스타킹3","스타킹4","스타킹5"]
+		};
+		*/
+		
+		/*
+		let arr_fname = {
+				"축구공":["ball1.jpg","ball2.jpg","ball3.jpg","ball4.jpg","ball5.jpg"],
+				"유니폼":["cloth1.jpg","cloth2.jpg","cloth3.jpg","cloth4.jpg","cloth5.jpg"],
+				"축구화":["shoe1.jpg","shoe2.jpg","shoe3.jpg","shoe4.jpg","shoe5.jpg"],
+				"스타킹":["stock1.jpg","stock2.jpg","stock3.jpg","stock4.jpg","stock5.jpg"]
+		};
+		*/
+		
+		$.each(arr_goods,function(index,item){
+			$("#goods_list").append($("<option></option>").html(item));
+		});
+		
+		$("#goods_list").change(function () {
+			let goods_name = $("#goods_list > option:selected").val();
+			$("#fname_list").empty();
+			
+			let arr = arr_fname[goods_name];
+			$.each(arr,function(index,item){
+				let option = $("<option></option>").html(item.name);
+				
+				//속성을 부여
+				$(option).attr("fname",item.fname);
+				
+				$("#fname_list").append(option);
+			});
+		});
+		
+		$("#fname_list").change(function () {
+			//let fname = $("#fname_list > option:selected").val();
+		
+			//부여된 속성을 가져오기
+			let fname = $("#fname_list > option:selected").attr("fname");
+			
+			let path = `images/${fname}`;
+			$("img").attr("src",path);
+		})
+	})
+</script>
+</head>
+<body>
+	<select id="goods_list"></select>
+	<select id="fname_list"></select>
+	<hr>
+	<img>
+</body>
+</html>
