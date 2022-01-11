@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script type="text/javascript">
+	$(function() {
+		let data = [{name:"홍길동",addr:"서울"},{name:"이순신",addr:"전주"},{name:"유관순",addr:"제주"}];
+		$("div").append(function(i) {
+			let output = "<h1>"+data[i].name+"</h1>";
+			output += "<h2>"+data[i].addr+"</h2>";
+			return output;
+		});
+	});
+</script>
+</head>
+<body>
+	<div></div>
+	<div></div>
+	<div></div>
+</body>
+</html>

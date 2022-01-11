@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script type="text/javascript">
+	$(function () {
+		let arr = [
+			{name:"Daum",link:"http://www.daum.net"},
+			{name:"Sist",link:"http://www.sist.co.kr"},
+			{name:"Naver",link:"http://www.naver.com"},
+			{name:"Google",link:"http://www.google.com"}
+		];
+		
+		let output = "";
+		$.each(arr,function(index,item){
+			output += "<a href='"+item.link+"'>";
+			output += "<h2>"+item.name+"</h2>";
+			output += "</a>";
+		});
+		
+		document.body.innerHTML = output;
+	});
+
+</script>
+</head>
+<body>
+
+</body>
+</html>
