@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+	p,a{
+		margin: 5px;
+		padding: 10px;
+		border: solid black 3px;
+	}
+</style>
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script type="text/javascript">
+	$(function() {
+		$("a").click(function() {
+			$(this).css("background","blue");
+			//event.preventDefault();
+			//event.stopPropagation();
+			return false;
+		});
+		
+		$("p").click(function() {
+			$(this).css("background","red");
+		});
+	});
+</script>
+</head>
+<body>
+	<p>
+		hello<br>
+		<a href="http://www.naver.com">네이버</a>
+	</p>
+</body>
+</html>

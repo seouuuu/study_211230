@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+	.outer{
+		width: 200px;
+		height: 200px;
+		background: orange;
+		padding: 50px;
+		margin: 10px;
+	}
+	
+	.inner{
+		width: 100%;
+		height: 100%;
+		background: pink;
+	}
+</style>
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script type="text/javascript">
+	$(function() {
+		$(".outer").mouseenter(function() {		//바깥에서 들어올 때 발생
+			$("body").append("<p>enter</p>");
+		}).mouseover(function() {
+			$("body").append("<p>over</p>");	//바깥에서 들어올 때, 안에서 자식 노드 위를 이동할 때도 발생
+		});
+	});
+</script>
+</head>
+<body>
+	<div class="outer">
+		<div class="inner"></div>
+	</div>
+</body>
+</html>

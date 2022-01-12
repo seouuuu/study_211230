@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script type="text/javascript">
+	$(function() {
+		$("h1").click(function() {
+			//$(this).next().toggle();	
+			//$(this).next().toggle(2000);
+			/*
+			$(this).next().toggle(2000,function(){
+				alert("작업 끝");
+			});	
+			*/
+			/*
+			$(this).next().slideToggle(2000,function(){
+				alert("작업 끝");
+			});	
+			*/
+			$(this).next().fadeToggle(2000,function(){
+				alert("작업 끝");
+			});	
+		});
+	});
+</script>
+</head>
+<body>
+	<h1>Open & close</h1>
+	<div>
+		<h1>"다들 말은 그렇게 해도 다시 오는 사람은 없더라"</h1>
+		<p>하염없이 누군가를 기다리는 요양병원 어르신들... 기약 없는 약속은 하고 싶지 않았습니다</p>
+	</div>
+	
+	<h1>Open & close</h1>
+	<div>
+		<h1>‘국립’이 뭐길래…두 오케스트라의 팽팽한 신경전</h1>
+		<p>문체부 산하 코리안 심포니, '국립'으로 명칭변경 추진</p>
+	</div>
+</body>
+</html>

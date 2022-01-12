@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+	*{
+		margin: 0px;
+		padding: 0px;
+	}
+	
+	div{
+		margin: 10px;
+		padding: 10px;
+		border: solid 3px black;
+		border-radius: 10px;
+	}
+</style>
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script type="text/javascript">
+	$(function() {
+		$("div").on("click",function(){
+			$(this).clone().appendTo("body");
+		});
+	});
+</script>
+</head>
+<body>
+	<div>
+		<h1>'조선 사람들의 꿈' 평생도, 디지털 복원으로 되살아났다</h1>
+		<p>국립중앙박물관, 웹페이지서 평생도 원본·복원본 공개
+			조선 사람들이 꿈꾼 인생의 8가지 장면 보여주는 작품</p>
+	</div>
+</body>
+</html>

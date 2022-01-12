@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+	div{
+		width: 50px;
+		height: 50px;
+		position: relative;
+		background: orange;
+	}
+</style>
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script type="text/javascript">
+	$(function() {
+		$("#div1").animate({
+			left:'+=60'
+			},2000).animate({
+			width:'+=60'
+			},2000).animate({
+			height:'+=60'
+			},2000);
+		
+		$("#div2").animate({
+			left:'+=60'
+			},2000).animate({
+			width:'+=60'
+			},2000).animate({
+			height:'+=60'
+			},2000);
+		
+		setTimeout(function() {
+			$("#div1").clearQueue();
+			//$("#div1").hide();
+		}, 3000);
+	});
+
+</script>
+</head>
+<body>
+	<div id="div1"></div>
+	<div id="div2"></div>
+</body>
+</html>

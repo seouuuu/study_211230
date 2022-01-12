@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script type="text/javascript">
+	$(function() {
+		$("h1").bind("click",function(){
+			let length = $("h1").length;
+			let data = $(this).html();
+			$("#wrap").append("<h1>"+length+"-"+data+"</h1>");
+		});
+	});
+</script>
+</head>
+<body>
+	<div id="wrap">
+		<h1>hello</h1>
+	</div>
+</body>
+</html>
