@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script type="text/javascript">
+$(function(){
+	$("button").click(function(){
+
+		let data = {
+				bookname: $("#bookname").val(),
+				publisher:$("#publisher").val()
+		};
+		
+		$.ajax({
+			url:"bookData.jsp",
+			data:data,
+			success:function(data){
+				$("h2").html(data);
+			}
+		});
+	});
+});
+</script>
+</head>
+<body>
+	도서명: <input type="text" id="bookname"><br>
+	출판사: <input type="text" id="publisher"><br>
+	<button>도서가격 확인</button>
+	<hr>
+	도서가격
+	<h2></h2>
+</body>
+</html>
